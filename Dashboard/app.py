@@ -79,19 +79,15 @@ filtered_df = df[
 # ======================
 # KPI CARDS
 # ======================
-total_sales = filtered_df["sales"].sum()
-total_profit = filtered_df["profit"].sum()
-total_orders = filtered_df["order_id"].nunique()
-total_quantity = filtered_df["quantity"].sum()
+profit_margin = (total_profit / total_sales) * 100 if total_sales != 0 else 0
 
-kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
 
 kpi1.metric("Total Sales", f"${total_sales:,.0f}")
 kpi2.metric("Total Profit", f"${total_profit:,.0f}")
 kpi3.metric("Total Orders", f"{total_orders:,}")
 kpi4.metric("Quantity Sold", f"{total_quantity:,}")
-
-st.markdown("---")
+kpi5.metric("Profit Margin", f"{profit_margin:.2f}%")
 
 # ======================
 # DATA FOR CHARTS
@@ -173,6 +169,20 @@ fig_profit = px.bar(
     title="Profit by Category"
 )
 
+fig_donut = px.pie(
+    category_sales,
+    values="sales",
+    names="category",
+    hole=0.55,
+    title="Sales Share by Category"
+)
+
+fig_donut.update_layout(
+    height=300,
+    margin=dict(l=20, r=20, t=45, b=20),
+    title_font_size=16
+)
+
 # Chart sizing
 for fig in [fig_trend, fig_category, fig_region, fig_products, fig_profit]:
     fig.update_layout(
@@ -200,18 +210,33 @@ with row1_col3:
 row2_col1, row2_col2, row2_col3 = st.columns(3)
 
 with row2_col1:
-    st.plotly_chart(fig_products, use_container_width=True)
+    st.plotly_chart(fig_donut, use_container_width=True)
 
 with row2_col2:
     st.plotly_chart(fig_profit, use_container_width=True)
 
 with row2_col3:
-    st.subheader("Key Insights")
-    st.success("Office Supplies generated the highest sales revenue.")
-    st.success("Technology produced the highest profit.")
-    st.success("Central region recorded the strongest sales.")
-    st.success("Revenue showed consistent growth over time.")
-    st.success("Top products contributed significantly to revenue.")
+    st.plotly_chart(fig_products, use_container_width=True)
+
+# ===================
+#DATA SET PREVIEW
+#======================
+st.markdown("---")
+st.subheader("Dataset Preview")
+
+st.dataframe(
+    filtered_df.head(20),
+    use_container_width=True
+)
+
+csv = filtered_df.to_csv(index=False)
+
+st.download_button(
+    "Download Filtered Dataset",
+    csv,
+    file_name="sales_data.csv",
+    mime="text/csv"
+)
 
 # ======================
 # RECOMMENDATIONS
