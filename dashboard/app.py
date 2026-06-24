@@ -43,12 +43,7 @@ h1 {
 # ======================
 # LOAD DATA
 # ======================
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
-csv_path = BASE_DIR.parent / "Dataset" / "SuperStoreOrders.csv"
-
-df = pd.read_csv(csv_path)
+df = pd.read_csv("../SuperStoreOrders.csv")
 
 df["sales"] = pd.to_numeric(df["sales"], errors="coerce")
 df["profit"] = pd.to_numeric(df["profit"], errors="coerce")
