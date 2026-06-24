@@ -43,7 +43,7 @@ h1 {
 # ======================
 # LOAD DATA
 # ======================
-df = pd.read_csv("/Users/jyotish/Desktop/Future Interns/TASK 1/Dataset/SuperStoreOrders.csv")
+df = pd.read_csv("../Dataset/SuperStoreOrders.csv")
 
 df["sales"] = pd.to_numeric(df["sales"], errors="coerce")
 df["profit"] = pd.to_numeric(df["profit"], errors="coerce")
