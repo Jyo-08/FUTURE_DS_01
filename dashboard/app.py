@@ -43,7 +43,15 @@ h1 {
 # ======================
 # LOAD DATA
 # ======================
-df = pd.read_csv("../SuperStoreOrders.csv")
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+ROOT_DIR = BASE_DIR.parent
+
+st.write("Files in repo root:", os.listdir(ROOT_DIR))
+
+df = pd.read_csv(ROOT_DIR / "SuperStoreOrders.csv")
 
 df["sales"] = pd.to_numeric(df["sales"], errors="coerce")
 df["profit"] = pd.to_numeric(df["profit"], errors="coerce")
