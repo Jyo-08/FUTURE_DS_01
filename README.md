@@ -41,7 +41,9 @@ The dataset contains information related to:
 ## Live Dashboard
 
 🔗 https://futureds01-cfyyrnlmqi4wyy9mt3udhu.streamlit.app
-Picture of the dashboard:
+
+### Picture of the dashboard:
+
 ![Dashboard page](screenshots/dashboard.png)
 
 ## Analysis Performed
