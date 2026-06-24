@@ -43,13 +43,10 @@ h1 {
 # ======================
 # LOAD DATA
 # ======================
-import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 ROOT_DIR = BASE_DIR.parent
-
-st.write("Files in repo root:", os.listdir(ROOT_DIR))
 
 df = pd.read_csv(ROOT_DIR / "SuperStoreOrders.csv")
 
