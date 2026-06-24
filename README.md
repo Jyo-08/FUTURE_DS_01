@@ -71,15 +71,14 @@ https://futureds01-cfyyrnlmqi4wyy9mt3udhu.streamlit.app
 </p>
 
 <p align="center">
-  <img src="screenshots/top_10_producs.png" width="32%">
-  <img src="screenshots/profit_by_category.png" width="32%">
+  <img src="screenshots/top_10_producs.png" width="40%">
+  <img src="screenshots/profit_by_category.png" width="40%">
 </p>
 
 <p align="center">
-  <img src="screenshots/top_10_most_profitable_products.png" width="32%">
+  <img src="screenshots/top_10_most_profitable_products.png" width="50%">
 </p>
 
--- 
 
 # Key Findings
 
