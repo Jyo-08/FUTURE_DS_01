@@ -53,12 +53,12 @@ Compared sales performance across multiple business regions.
 ### 3. Revenue Trend Analysis
 
 Studied monthly sales trends to identify business growth patterns.
-![Revenue Trend Analysis](screenshots/revenue_trend_over__time.png)
+![Revenue Trend Analysis](screenshots/revenue_trend_over_time.png)
 
 ### 4. Top Selling Products
 
 Identified products generating the highest revenue.
-![Top Selling Products](screenshots/top_10_products.png)
+![Top Selling Products](screenshots/top_10_producs.png)
 
 ### 5. Profit by Category
 
