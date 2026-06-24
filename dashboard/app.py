@@ -84,6 +84,12 @@ filtered_df = df[
 # ======================
 # KPI CARDS
 # ======================
+
+total_sales = filtered_df["sales"].sum()
+total_profit = filtered_df["profit"].sum()
+total_orders = filtered_df["order_id"].nunique()
+total_quantity = filtered_df["quantity"].sum()
+
 profit_margin = (total_profit / total_sales) * 100 if total_sales != 0 else 0
 
 kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
