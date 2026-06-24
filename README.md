@@ -56,7 +56,8 @@ https://futureds01-cfyyrnlmqi4wyy9mt3udhu.streamlit.app
 
 ### Dashboard Preview
 
-![Dashboard page](screenshots/dashboard.png)
+![Dashboard page](screenshots/dashboard1.png)
+![Dashboard-2 page](screenshots/dashboard2.png)
 
 ---
 
