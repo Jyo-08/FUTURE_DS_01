@@ -42,11 +42,11 @@ The dataset contains information related to:
 
 🔗 https://futureds01-cfyyrnlmqi4wyy9mt3udhu.streamlit.app
 
-### Picture of the dashboard:
+## Picture of the dashboard:
 
 ![Dashboard page](screenshots/dashboard.png)
 
-## Analysis Performed
+### Analysis Performed
 
 ### 1. Sales by Category
 
