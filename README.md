@@ -38,6 +38,10 @@ The dataset contains information related to:
 * Kaggle Notebook
 * GitHub
 
+## Live Dashboard
+
+🔗 https://futureds01-cfyyrnlmqi4wyy9mt3udhu.streamlit.app
+
 ## Analysis Performed
 
 ### 1. Sales by Category
