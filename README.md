@@ -46,7 +46,7 @@ The dataset contains information related to:
 
 ![Dashboard page](screenshots/dashboard.png)
 
-## Analysis Performed
+### Analysis Performed
 
 ### 1. Sales by Category
 
